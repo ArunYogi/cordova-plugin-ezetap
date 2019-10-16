@@ -34,7 +34,7 @@ then you can start the payment capture by calling 'startPayment' method.
 ```js
 var successcallback = (result) => { console.log(result)};
 var errorCallback = (err) => {console.error(err)};
-Ezetap.startpayment(request, successcallback, errorCallback);
+Ezetap.initialize(request, successcallback, errorCallback);
 ```
 
 Demo App key and Production app key will provided by Ezetap Team. (Contact Ezetap integration team for those details)
