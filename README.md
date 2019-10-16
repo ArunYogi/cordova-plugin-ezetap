@@ -8,7 +8,7 @@ A Cordova plugin to use Ezetap POS machine for card payment.
 cordova plugin add https://github.com/ArunYogi/cordova-plugin-ezetap.git
 ```
 
-On successful installation of this plugin. The plugin would be availble as "Ezetap" as global variable. Declare the variable in the ts of js file you are going access this plugin
+On successful installation of this plugin, it would be availble as "Ezetap" (as global variable). Mention below line in top of TS of JS file you are going access this plugin
 
 ```js
 declare var Ezetap :any
