@@ -9,7 +9,6 @@
 *.swo
 *.swp
 *.tgz
-*.xml
 .DS_Store
 .idea
 .vscode
@@ -20,3 +19,5 @@ coverage
 node_modules
 npm-debug.log
 /nbproject/private/
+.gradle
+.settings

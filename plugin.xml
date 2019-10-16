@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:rim="http://www.blackberry.com/ns/widgets" 
+    xmlns:android="http://schemas.android.com/apk/res/android" id="com.eze.api" version="0.0.1">
+    <name>Eazetap</name>
+    <description>Cordova plugin for Eazetap</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,eazetap,payment</keywords>
+
+    <js-module src="www/ezetap.js" name="Ezetap">
+        <clobbers target="Ezetap"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="EzeAPIPlugin">">
+                <param name="android-package" value="com.eze.api.EzeAPIPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.eze.api.EzeAPIActivity" android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <provider android:name="com.ezetap.sdk.EzetapFileProvider" android:authorities="cordova.plugin.eazetap.EzetapFileProvider" android:exported="false" android:grantUriPermissions="true">
+                <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
+            </provider>
+        </config-file>
+        <lib-file src="src/android/lib/EzetapAndroidSDK-Cordova1.0.16.jar"/>
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
+        <!-- <framework src="com.android.support:support-v4:26.+"/> -->
+        <source-file src="src/android/xml/provider_paths.xml" target-dir="res/xml" />
+        <hook type="before_plugin_add" src="scripts/before_plugin_add.js"/>
+    </platform>
+</plugin>
