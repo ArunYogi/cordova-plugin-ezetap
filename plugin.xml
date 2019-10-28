@@ -11,8 +11,8 @@
         <clobbers target="Ezetap"/>
     </js-module>
 
-    <hook type="before_plugin_add" src="scripts/before_plugin_add.js"/>
-    <hook type="before_plugin_install" src="scripts/before_plugin_install.js"/>
+    <!-- <hook type="before_plugin_add" src="scripts/before_plugin_add.js"/>
+    <hook type="before_plugin_install" src="scripts/before_plugin_install.js"/> -->
 
     <!-- android -->
     <platform name="android">
@@ -31,7 +31,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <provider android:name="com.ezetap.sdk.EzetapFileProvider" android:authorities="cordova.plugin.eazetap.EzetapFileProvider" android:exported="false" android:grantUriPermissions="true">
+            <provider android:name="com.ezetap.sdk.EzetapFileProvider" android:authorities="${applicationId}.EzetapFileProvider" android:exported="false" android:grantUriPermissions="true">
                 <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
             </provider>
         </config-file>
