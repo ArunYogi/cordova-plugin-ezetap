@@ -4,7 +4,7 @@ const xml2js = require("xml2js");
 const path = require('path')
 
 module.exports = function (context) {
-    console.log("before_plugin_add script is called");
+    console.log("before_plugin_install script is called");
     return new Promise((resolve, reject) => {
         var rootPath = context.opts.projectRoot;
         var configXmlPath = path.join(rootPath, 'config.xml');

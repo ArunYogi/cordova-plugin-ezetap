@@ -12,7 +12,7 @@
     </js-module>
 
     <hook type="before_plugin_add" src="scripts/before_plugin_add.js"/>
-    <hook type="before_plugin_install" src="scripts/before_plugin_add.js"/>
+    <hook type="before_plugin_install" src="scripts/before_plugin_install.js"/>
 
     <!-- android -->
     <platform name="android">
