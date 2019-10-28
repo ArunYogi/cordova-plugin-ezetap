@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-ezetap",
+  "version": "1.0.0",
+  "description": "A Cordova plugin to integrate ezetap swiping machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArunYogi/cordova-plugin-ezetap.git"
+  },
+  "keywords": [
+    "cordova",
+    "cordova-plugin",
+    "ezetap",
+    "payment-gateway"
+  ],
+  "author": "arun.yogesh@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArunYogi/cordova-plugin-ezetap/issues"
+  },
+  "homepage": "https://github.com/ArunYogi/cordova-plugin-ezetap#readme"
+}
