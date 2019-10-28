@@ -3,17 +3,18 @@ var parseString = require("xml2js").parseString;
 var xml2js = require("xml2js");
 
 module.exports = function (context) {
+    console.log("before_plugin_add script is called");
     return new Promise((resolve, reject) => {
         var rootPath = context.opts.projectRoot;
         var configXmlPath = path.join(rootPath, 'config.xml');
         var configXml = fs.readFileSync(configXmlPath, "utf-8");
         var pluginXml = fs.readFileSync('plugin.xml', "utf-8");
-
+        console.log("pluginXml", pluginXml, "configXml", configXml);
         // we then pass the data to our method here
         parseString(configXml, function (err, configXmlParsed) {
             if (err) {
                 console.log(err);
-                reject(err)
+                reject(err);
             } else {
                 // here we log the results of our xml string conversion
                 console.log(configXmlParsed);

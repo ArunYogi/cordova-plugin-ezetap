@@ -11,6 +11,9 @@
         <clobbers target="Ezetap"/>
     </js-module>
 
+    <hook type="before_plugin_add" src="scripts/before_plugin_add.js"/>
+    <hook type="before_plugin_install" src="scripts/before_plugin_add.js"/>
+
     <!-- android -->
     <platform name="android">
         <config-file target="config.xml" parent="/*">
@@ -36,6 +39,5 @@
         <!-- <framework src="src/android/build.gradle" custom="true" type="gradleReference"/> -->
         <!-- <framework src="com.android.support:support-v4:26.+"/> -->
         <source-file src="src/android/xml/provider_paths.xml" target-dir="res/xml" />
-        <hook type="before_plugin_add" src="scripts/before_plugin_add.js"/>
     </platform>
 </plugin>
