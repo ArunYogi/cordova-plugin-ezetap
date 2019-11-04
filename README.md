@@ -1,4 +1,4 @@
-# Cordva Plugin Ezetap
+# Cordva Plugin Ezetap (:warning: Still in Development)
 
 A Cordova plugin to use Ezetap POS machine for card payment.
 
