@@ -3,6 +3,9 @@ module.exports = {
     initialize: function (request, successCallback, failureCallback) {
         cordova.exec(successCallback, failureCallback, "EzeAPIPlugin", "initialize", [request]);
     },
+    prepareDevice: function (successCallback, failureCallback) {
+        cordova.exec(successCallback, failureCallback, "EzeAPIPlugin", "prepareDevice", []);
+    },
     cardTransaction: function (request, successCallback, failureCallback) {
         cordova.exec(successCallback, failureCallback, "EzeAPIPlugin", "cardTransaction", [request]);
     },
