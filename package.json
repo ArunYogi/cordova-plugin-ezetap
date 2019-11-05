@@ -1,5 +1,5 @@
 {
-  "name": "com.eze.api",
+  "name": "cordova-plugin-ezetap",
   "version": "1.0.0",
   "description": "A Cordova plugin to integrate ezetap swiping machine",
   "main": "index.js",

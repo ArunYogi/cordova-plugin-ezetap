@@ -1,11 +1,11 @@
-# Cordva Plugin Ezetap (:warning: Still in Development)
+# Cordva Plugin Ezetap
 
 A Cordova plugin to use Ezetap POS machine for card payment.
 
 ## Installation
 
 ```bash
-cordova plugin add https://github.com/ArunYogi/cordova-plugin-ezetap.git
+cordova plugin add cordova-plugin-ezetap
 ```
 
 On successful installation of this plugin, the plugin would be availble as "Ezetap" (as global variable). Mention below line in top of TS of JS file you are going access this plugin
