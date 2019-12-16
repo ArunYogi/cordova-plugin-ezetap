@@ -146,3 +146,8 @@ Ezetap.close(successcallback, errorCallback);
 https://sandbox.ezetap.com/static/docs-cordova.html <br>
 https://github.com/ezetap/android-payments-sdk <br>
 https://github.com/ezetap/client-sdk-android/tree/master/release
+
+
+### Release Notes:
+0.0.1 -> Initial release of Ezetap integrated Plugin for cordova environment
+0.0.2 -> Added user permission to install Ezetap Service APP, which is necessary for proper transaction or interaction with Ezetap device
